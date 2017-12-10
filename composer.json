@@ -1,8 +1,11 @@
 {
     "name": "ghostfly/pdf-forms-filler",
     "description": "Fill Acrobat forms easily using pure PHP ! 💪",
+    "homepage": "https://github.com/Ghostfly/PDFFormsFiller",
+    "keywords": ["php","pdf", "forms", "fill", "filler"],
     "type": "library",
     "require": {
+        "php": ">=7.1.0",
         "setasign/fpdf": "^1.8",
         "setasign/fpdi": "^2.0"
     },
