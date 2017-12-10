@@ -47,20 +47,45 @@ $fields = json_decode($coords, true);
 $fieldEntities = [];
 
 foreach($fields as $field) {
-    $fieldEntities[] = Field::fieldFromArray($field);
+    try {
+        $fieldEntities[] = Field::fieldFromArray($field);
+    } catch (Exception $e) {
+        echo "page undefined for field" . $field;
+    }
 }
 
 $data = [
-  'cat_name'              => "Mickey",
-  'reward'              => "2 beers",
-  'phone'           => "+3361265656565"
+  'cat_name'    => [
+      "size"  => 24,
+      "style" => 'B',
+      'family'  => 'Arial',
+      'value' => 'Mickey'
+  ],
+  'reward' => [
+      "size"  => 14,
+      "style" => 'B',
+      'family'  => 'Arial',
+      'value' => '2 beers'
+  ],
+  'phone' => [
+      "size"  => 14,
+      "style" => 'B',
+      'family'  => 'Arial',
+      'value' => "+3361265656565"
+  ],
 ];
 
 $original = getcwd() . "/FormAcrobat6.pdf";
 $dest = getcwd() . "/FormFilled.pdf";
 
 $pdfGenerator = new PDFGenerator($fieldEntities, $data, 'P', 'pt', 'A4');
-$pdfGenerator->start($original, $dest);
+
+try {
+    $pdfGenerator->start($original, $dest);
+} catch (Exception $e) {
+    echo "error" . $e;
+    die();
+}
 
 echo "done";
 

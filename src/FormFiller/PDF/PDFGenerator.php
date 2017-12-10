@@ -125,12 +125,14 @@ class PDFGenerator {
                 $this->fpdf->AddPage();
             }
 
+            $this->fpdf->SetFont($data[$field->getId()]['family'], $data[$field->getId()]['style'], $data[$field->getId()]['size']);
+
             // Set with good coords system.
             $this->fpdf->SetXY($field->getLlx(), PDFHelper::reverseYAxis($pageSize, $offset, $field->getLly()));
 
             // Write !
             if(array_key_exists($field->getId(), $data))
-                $field->setValue($data[$field->getId()]);
+                $field->setValue($data[$field->getId()]['value']);
             else
                 $field->setValue("");
 
