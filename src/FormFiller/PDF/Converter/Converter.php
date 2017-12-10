@@ -117,5 +117,13 @@ class Converter {
                 return $p;
             }
         }
+        return 0;
+    }
+
+    /**
+     * @return array
+     */
+    public function getPages(){
+        return $this->pages;
     }
 }
