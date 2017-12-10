@@ -2,7 +2,10 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use FormFiller\PDF\Converter\Converter;
+use FormFiller\PDF\Field;
 use FormFiller\PDF\PDFGenerator;
+
+opcache_reset();
 
 $string = "4 widget annotations found on page 1.
 ----------------------------------------------
@@ -46,12 +49,25 @@ name_2:
 
 $converter = new Converter($string);
 $converter->loadPagesWithFieldsCount();
-$coords = $converter->formatFieldsAsJson();
+$coords = $converter->formatFieldsAsJSON();
+
+var_dump($coords);
+
+$fields = json_decode($coords, true);
+
+var_dump($fields);
+
+$fieldEntities = [];
+
+foreach($fields as $field) {
+    $fieldEntities[] = Field::fieldFromArray($field);
+}
+
 
 $original = "./form-acrobat16.pdf";
 $dest = "./form-filled.pdf";
 
-$pdfGenerator = new PDFGenerator($coords, $data, 'P', 'pt', 'A4');
+$pdfGenerator = new PDFGenerator($fieldEntities, $data, 'P', 'pt', 'A4');
 $pdfGenerator->start($original, $dest);
 
 echo "done";

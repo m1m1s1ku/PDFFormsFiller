@@ -52,8 +52,8 @@ class Converter {
         $json = "";
 
         foreach($matches as $match){
-            $newObject = "";
             if(!in_array($match[1], $coords)){
+                echo "not coords";
                 $newObject = "{\"".$match[1]."\":{";
             } else if($match[1] == 'height') {
                 $onPage = count($objects);
