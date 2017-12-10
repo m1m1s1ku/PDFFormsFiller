@@ -15,5 +15,10 @@
             "name": "Léonard Cherouvrier",
             "email": "leonard.cherouvrier@icloud.com"
         }
-    ]
+    ],
+    "autoload": {
+      "psr-0": {
+        "Ghostfly": "src/"
+      }
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Generator\Converter;
+namespace Ghostfly\PDF\Converter;
 
 
 /**
