@@ -3,7 +3,7 @@ php:
   - '7.1'
 
 before_install:
-- composer require phpunit/phpunit:4.8.* satooshi/php-coveralls:dev-master
+- composer require phpunit/phpunit:6.5.* satooshi/php-coveralls:dev-master
 - composer install --dev
 
 script:
