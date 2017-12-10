@@ -5,7 +5,7 @@
 
 [![Build Status](https://travis-ci.org/Ghostfly/PDFFormsFiller.svg?branch=master)](https://travis-ci.org/Ghostfly/PDFFormsFiller)
 [![Total Downloads](https://poser.pugx.org/ghostfly/pdf-forms-filler/downloads)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
-[![Coverage Status](https://coveralls.io/repos/github/Ghostfly/PDFFormsFiller/badge.svg?branch=master)](https://coveralls.io/github/Ghostfly/PDFFormsFiller?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Ghostfly/PDFFormsFiller/badge.svg?branch=master)](https://coveralls.io/github/Ghostfly/PDFFormsFiller?branch=master?service=github)
 [![License](https://poser.pugx.org/ghostfly/pdf-forms-filler/license)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
 [![composer.lock](https://poser.pugx.org/ghostfly/pdf-forms-filler/composerlock)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
 
