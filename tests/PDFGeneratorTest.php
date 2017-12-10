@@ -39,9 +39,9 @@ final class PDFGeneratorTest extends TestCase
             $fieldEntities[] = $field;
         }
 
-        $fakePDFPath = dirname(__DIR__) . "/examples";
+        $fakePDFPath = dirname(__DIR__) . "/example";
 
-        $original = $fakePDFPath . "/FormAcrobat6.pdf";
+        $original = $fakePDFPath . "/FormAcrobat13.pdf";
         $dest = $fakePDFPath . "/FormFilledByTravis.pdf";
 
         if(file_exists($dest))

@@ -18,9 +18,9 @@ composer require ghostfly/pdf-forms-filler
 
 ## Run example :
 - clone repository
-- go to examples folder
+- go to example folder
 - composer install
-- run [index.php](https://github.com/Ghostfly/PDFFormsFiller/blob/master/examples/index.php)
+- run [index.php](https://github.com/Ghostfly/PDFFormsFiller/blob/master/example/index.php)
 
 ## Usage :
 You need to do a PDF Form with Acrobat, and the string to convert is given by this page :
