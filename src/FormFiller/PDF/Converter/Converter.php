@@ -57,11 +57,13 @@ class Converter {
             } else if($match[1] == 'height') {
                 $onPage = count($objects);
                 $page = $this->findPageForField($onPage);
-                $newObject .=  "\"". $match[1] . "\":".$match[2] . ",\"page\":$page}},";
+                /** @var string $newObject */
+                $newObject .= "\"" . $match[1] . "\":" . $match[2] . ",\"page\":$page}},";
                 $objects[] = $newObject;
                 $json .= $newObject;
             } else {
-                $newObject .=  "\"". $match[1] . "\":".$match[2] . ",";
+                /** @var string $newObject */
+                $newObject .= "\"" . $match[1] . "\":" . $match[2] . ",";
             }
         }
 
