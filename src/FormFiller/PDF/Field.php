@@ -188,5 +188,69 @@ class Field {
         $this->value = $value;
 
         return $this;
-}
+    }
+
+    /**
+     * @param string $id
+     */
+    public function setId (string $id): void {
+
+        $this->id = $id;
+    }
+
+    /**
+     * @param float $llx
+     */
+    public function setLlx (float $llx): void {
+
+        $this->llx = $llx;
+    }
+
+    /**
+     * @param float $lly
+     */
+    public function setLly (float $lly): void {
+
+        $this->lly = $lly;
+    }
+
+    /**
+     * @param float $urx
+     */
+    public function setUrx (float $urx): void {
+
+        $this->urx = $urx;
+    }
+
+    /**
+     * @param float $ury
+     */
+    public function setUry (float $ury): void {
+
+        $this->ury = $ury;
+    }
+
+    /**
+     * @param float $width
+     */
+    public function setWidth (float $width): void {
+
+        $this->width = $width;
+    }
+
+    /**
+     * @param float $height
+     */
+    public function setHeight (float $height): void {
+
+        $this->height = $height;
+    }
+
+    /**
+     * @param int $page
+     */
+    public function setPage (int $page): void {
+
+        $this->page = $page;
+    }
 }

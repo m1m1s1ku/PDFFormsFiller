@@ -65,12 +65,13 @@ class PDFGenerator {
      * @param string $formPath
      * @param string $dest
      *
+     * @param string $fontName
+     *
      * @param string $fontSize
      *
      * @param string $fontStyle
-     * @param string $fontName
      *
-     * @return void
+     * @return bool
      * @throws \Exception
      */
     public function start(string $formPath, string $dest, string $fontName = 'Arial', string $fontSize = '12', string $fontStyle = 'B') {
@@ -92,7 +93,7 @@ class PDFGenerator {
         $this->writeFields($this->fields, $this->data, $sizes[$this->size]);
 
         // generated path
-        $generated = "tmp/temp.pdf";
+        $generated = getcwd() . "/tmp/temp.pdf";
 
         $this->fpdf->Output("F", $generated, true);
 
@@ -101,6 +102,8 @@ class PDFGenerator {
 
         // clean generated not merged
         unlink($generated);
+
+        return true;
     }
 
     /**

@@ -34,7 +34,10 @@ final class ConverterTest extends TestCase
 
     public function testFieldsFormattedAsJSON(){
         $coords = $this->converter->formatFieldsAsJSON();
-        $this->assertEquals("[{\"cat_name\":{\"llx\":278.585,\"lly\":363.377,\"urx\":428.585,\"ury\":386.902,\"width\":150,\"height\":23.525,\"page\":1}},{\"reward\":{\"llx\":366.262,\"lly\":297.106,\"urx\":555.914,\"ury\":314.53,\"width\":189.652,\"height\":17.424,\"page\":1}},{\"phone\":{\"llx\":365.753,\"lly\":250.59,\"urx\":555.406,\"ury\":268.523,\"width\":189.653,\"height\":17.933,\"page\":1}}]", $coords);
+        $this->assertEquals(<<<TAG
+[{"cat_name":{"llx":278.585,"lly":363.377,"urx":428.585,"ury":386.902,"width":150,"height":23.525,"page":1}},{"reward":{"llx":366.262,"lly":297.106,"urx":555.914,"ury":314.53,"width":189.652,"height":17.424,"page":1}},{"phone":{"llx":365.753,"lly":250.59,"urx":555.406,"ury":268.523,"width":189.653,"height":17.933,"page":1}}]
+TAG
+, $coords);
     }
 
     public function testPageFindForField(){
