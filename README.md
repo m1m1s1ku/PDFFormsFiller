@@ -7,6 +7,12 @@ Fill Acrobat forms easily using pure PHP ! 💪
 composer require ghostfly/pdf-forms-filler:dev-master
 ```
 
+## Run example :
+- clone repository
+- go to examples folder
+- composer install
+- run index.php
+
 ## Usage :
 You need to do a PDF Form with Acrobat, and the string to convert is given by this page :
 
