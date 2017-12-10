@@ -36,7 +36,7 @@ final class PDFGeneratorTest extends TestCase
         $fakePDFPath = dirname(__DIR__) . "/examples";
 
         $original = $fakePDFPath . "/FormAcrobat6.pdf";
-        $dest = $fakePDFPath . "/FormFilled.pdf";
+        $dest = $fakePDFPath . "/FormFilledByTravis.pdf";
 
         if(file_exists($dest))
             unlink($dest);
