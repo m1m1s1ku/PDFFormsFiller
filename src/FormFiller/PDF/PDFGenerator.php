@@ -79,9 +79,11 @@ class PDFGenerator {
         $this->fpdf->AliasNbPages();
         $this->fpdf->SetFont('Arial', 'B', '8');
 
+        $sizes = ['A3'     => 1190.55, 'A4' => 841.89, 'A5' => 595.28,
+                      'letter' => 792, 'legal' => 1008];
 
         // writing fields, if value not defined defaults to blank string
-        $this->writeFields($this->fields, $this->data, 841.890);
+        $this->writeFields($this->fields, $this->data, $sizes[$this->size]);
 
         // generated path
         $generated = "tmp/temp.pdf";
