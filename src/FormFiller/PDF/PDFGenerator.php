@@ -178,6 +178,9 @@ class PDFGenerator {
 
         // Done.
         try {
+            /**
+             * @var FPDF $pdf
+             */
             $pdf->Output("F", $dest, true);
         } catch (\Exception $e){
             // Path not writable, probably
