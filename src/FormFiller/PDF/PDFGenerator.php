@@ -2,7 +2,7 @@
 
 namespace FormFiller\PDF;
 
-use setasign\Fpdi\Fpdi;
+use FPDI;
 use FPDF;
 
 /**
