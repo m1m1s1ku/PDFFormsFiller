@@ -45,4 +45,10 @@ $pdfGenerator = new PDFGenerator($coords, $data, 'P', 'pt', 'A4');
 $pdfGenerator->start($original, $dest);
 ```
 
+If your original PDF is not handled by fpdf, you can convert it using this service :
+
+[Convert PDF](https://docupub.com/pdfconvert/) with "Acrobat 4.0 (PDF 1.3)"
+
+Don't care about form fields on file to send to generator, the locations are determined using the latest PDF format. 
+
 Done. ;)
