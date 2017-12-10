@@ -1,0 +1,16 @@
+{
+    "name": "ghostfly/ppdf-forms-filler",
+    "description": "Fill Acrobat forms easily using pure PHP ! 💪",
+    "type": "library",
+    "require": {
+        "setasign/fpdf": "^1.8",
+        "setasign/fpdi": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Léonard Cherouvrier",
+            "email": "leonard.cherouvrier@icloud.com"
+        }
+    ]
+}
