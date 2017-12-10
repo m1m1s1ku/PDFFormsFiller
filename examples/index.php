@@ -51,11 +51,7 @@ $converter = new Converter($string);
 $converter->loadPagesWithFieldsCount();
 $coords = $converter->formatFieldsAsJSON();
 
-var_dump($coords);
-
 $fields = json_decode($coords, true);
-
-var_dump($fields);
 
 $fieldEntities = [];
 
@@ -63,9 +59,15 @@ foreach($fields as $field) {
     $fieldEntities[] = Field::fieldFromArray($field);
 }
 
+$data = [
+  'date'              => "25/12/2017",
+  'name'              => "Troll",
+  'address'           => "123 Route du Champomy",
+  'name_2'            => "Troll des Cavernes"
+];
 
-$original = "./form-acrobat16.pdf";
-$dest = "./form-filled.pdf";
+$original = getcwd() . "/FormAcrobat6.pdf";
+$dest = getcwd() . "/FormFilled.pdf";
 
 $pdfGenerator = new PDFGenerator($fieldEntities, $data, 'P', 'pt', 'A4');
 $pdfGenerator->start($original, $dest);
