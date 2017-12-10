@@ -29,5 +29,29 @@ final class FieldTest extends TestCase
         $this->assertEquals(3, count($fieldEntities));
     }
 
+    /**
+     * Test field setters + getters
+     */
+    public function testFieldSettersAndGetters(){
+        $field = new Field;
+        $field->setId("cat");
+        $field->setWidth(420);
+        $field->setHeight(420);
+        $field->setLlx(420);
+        $field->setLly(420);
+        $field->setUrx(420);
+        $field->setUry(420);
+        $field->setPage(1);
+        $field->setValue('miaow');
 
+        $this->assertNotNull($field->getId());
+        $this->assertNotNull($field->getWidth());
+        $this->assertNotNull($field->getHeight());
+        $this->assertNotNull($field->getLlx());
+        $this->assertNotNull($field->getLly());
+        $this->assertNotNull($field->getUrx());
+        $this->assertNotNull($field->getUry());
+        $this->assertNotNull($field->getPage());
+        $this->assertNotNull($field->getValue());
+    }
 }
