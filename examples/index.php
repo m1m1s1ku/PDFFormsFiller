@@ -7,43 +7,34 @@ use FormFiller\PDF\PDFGenerator;
 
 opcache_reset();
 
-$string = "4 widget annotations found on page 1.
+$string = "3 widget annotations found on page 1.
 ----------------------------------------------
 
-date: 
-     llx: 109.299
-     lly: 741.093
-     urx: 259.299
-     ury: 763.093
+cat_name: 
+     llx: 278.585
+     lly: 363.377
+     urx: 428.585
+     ury: 386.902
    width: 150
-  height: 22
+  height: 23.525
 
 
-name: 
-     llx: 105.232
-     lly: 694.832
-     urx: 255.232
-     ury: 716.832
-   width: 150
-  height: 22
+reward: 
+     llx: 366.262
+     lly: 297.106
+     urx: 555.914
+     ury: 314.53
+   width: 189.652
+  height: 17.424
 
 
-address: 
-     llx: 130.888
-     lly: 652.708
-     urx: 280.888
-     ury: 674.708
-   width: 150
-  height: 22
-
-
-name_2: 
-     llx: 139.53
-     lly: 465.629
-     urx: 289.53
-     ury: 487.629
-   width: 150
-  height: 22
+phone: 
+     llx: 365.753
+     lly: 250.59
+     urx: 555.406
+     ury: 268.523
+   width: 189.653
+  height: 17.933
 ";
 
 
@@ -60,10 +51,9 @@ foreach($fields as $field) {
 }
 
 $data = [
-  'date'              => "25/12/2017",
-  'name'              => "Troll",
-  'address'           => "123 Route du Champomy",
-  'name_2'            => "Troll des Cavernes"
+  'cat_name'              => "Mickey",
+  'reward'              => "2 beers",
+  'phone'           => "+3361265656565"
 ];
 
 $original = getcwd() . "/FormAcrobat6.pdf";
