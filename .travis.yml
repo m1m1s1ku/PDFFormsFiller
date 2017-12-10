@@ -3,11 +3,8 @@ php:
   - '7.1'
 
 before_install:
-- composer require phpunit/phpunit:6.5.* satooshi/php-coveralls:dev-master
+- composer require phpunit/phpunit:6.5.*
 - composer install --dev
 
 script:
 - ./vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml tests
-
-after_script:
-- php vendor/bin/coveralls -v
