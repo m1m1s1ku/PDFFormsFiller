@@ -1,6 +1,6 @@
 <?php 
 
-namespace Ghostfly\PDF;
+namespace FormFiller\PDF;
 
 /**
  * An Adobe PDF Form Field

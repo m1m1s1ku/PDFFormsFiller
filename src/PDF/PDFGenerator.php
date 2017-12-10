@@ -1,6 +1,6 @@
 <?php
 
-namespace Ghostfly\PDF;
+namespace FormFiller\PDF;
 
 use setasign\Fpdi\Fpdi;
 use FPDF;
