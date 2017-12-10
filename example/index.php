@@ -5,8 +5,6 @@ use FormFiller\PDF\Converter\Converter;
 use FormFiller\PDF\Field;
 use FormFiller\PDF\PDFGenerator;
 
-opcache_reset();
-
 $string = "3 widget annotations found on page 1.
 ----------------------------------------------
 
