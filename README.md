@@ -7,9 +7,10 @@ Fill Acrobat forms easily using pure PHP ! 💪
 composer require ghostfly/pdf-forms-filler
 ```
 
+## Usage :
 You need to do a PDF Form with Acrobat, and the string to convert is given by this page :
 
-https://www.setasign.com/products/setapdf-core/demos/find-form-field-coordinates/
+[Find Form Field coordinates](https://www.setasign.com/products/setapdf-core/demos/find-form-field-coordinates/)
 
 Use Converter who gives you a JSON Array containing fields with locations / page, in a form usable by the Generator
 
