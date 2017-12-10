@@ -2,6 +2,11 @@
 
 Fill Acrobat forms easily using pure PHP ! 💪
 
+## Install :
+```
+composer require ghostfly/pdf-forms-filler
+```
+
 You need to do a PDF Form with Acrobat, and the string to convert is given by this page :
 
 https://www.setasign.com/products/setapdf-core/demos/find-form-field-coordinates/
