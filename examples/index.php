@@ -56,21 +56,21 @@ foreach($fields as $field) {
 
 $data = [
   'cat_name'    => [
-      "size"  => 24,
+      "size"  => 67,
+      'family'  => 'Helvetica',
       "style" => 'B',
-      'family'  => 'Arial',
       'value' => 'Mickey'
   ],
   'reward' => [
-      "size"  => 14,
-      "style" => 'B',
+      "size"  => 28,
       'family'  => 'Arial',
+      "style" => 'B',
       'value' => '2 beers'
   ],
   'phone' => [
-      "size"  => 14,
+      "size"  => 24,
+      'family'  => 'Helvetica',
       "style" => 'B',
-      'family'  => 'Arial',
       'value' => "+3361265656565"
   ],
 ];

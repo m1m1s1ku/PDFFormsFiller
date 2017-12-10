@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "ghostfly/pdf-forms-filler",
-            "version": "v1.0",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ghostfly/PDFFormsFiller.git",
-                "reference": "7a22129768efb9f8b43e4d97fe2bc3b61841a4cc"
+                "reference": "225b889dcb61305da195babd92e8893d772f955e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ghostfly/PDFFormsFiller/zipball/7a22129768efb9f8b43e4d97fe2bc3b61841a4cc",
-                "reference": "7a22129768efb9f8b43e4d97fe2bc3b61841a4cc",
+                "url": "https://api.github.com/repos/Ghostfly/PDFFormsFiller/zipball/225b889dcb61305da195babd92e8893d772f955e",
+                "reference": "225b889dcb61305da195babd92e8893d772f955e",
                 "shasum": ""
             },
             "require": {
@@ -50,7 +50,7 @@
                 "pdf",
                 "php"
             ],
-            "time": "2017-12-10T18:58:51+00:00"
+            "time": "2017-12-10T19:28:57+00:00"
         },
         {
             "name": "setasign/fpdf",
