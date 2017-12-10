@@ -5,7 +5,7 @@ use FormFiller\PDF\Converter\Converter;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers Converter
+ * @covers FormFiller\PDF\Converter\Converter
  */
 final class ConverterTest extends TestCase
 {
@@ -32,7 +32,7 @@ final class ConverterTest extends TestCase
 
     /**
      * Test if converter load his pages
-     *
+     * @cover FormFiller\PDF\Converter\Converter::loadPagesWithFieldsCount()
      */
     public function testPagesLoaded(){
         $this->converter->loadPagesWithFieldsCount();
@@ -41,7 +41,7 @@ final class ConverterTest extends TestCase
 
     /**
      * Test if fields are formatted in JSON
-     *
+     * @cover FormFiller\PDF\Converter\Converter::formatFieldsAsJSON()
      */
     public function testFieldsFormattedAsJSON(){
         $coords = $this->converter->formatFieldsAsJSON();
@@ -54,6 +54,7 @@ TAG
     /**
      * Test if page is find for defined field
      * @uses Reflection
+     * @covers FormFiller\PDF\Converter\Converter::findPageForField()
      */
     public function testPageFindForField(){
         $foo = self::getMethod('findPageForField');

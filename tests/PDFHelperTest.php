@@ -5,10 +5,14 @@ use PHPUnit\Framework\TestCase;
 use FormFiller\PDF\PDFHelper;
 
 /**
- * @covers PDFHelper
+ * @covers FormFiller\PDF\PDFHelper
  */
 final class PDFHelperTest extends TestCase
 {
+
+    /**
+     * @covers FormFiller\PDF\PDFHelper::reverseYAxis()
+     */
     public function testReverseYAxis(): void
     {
         $this->assertEquals(

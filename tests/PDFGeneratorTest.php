@@ -6,7 +6,7 @@ use FormFiller\PDF\Field;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers PDFGenerator
+ * @covers FormFiller\PDF\PDFGenerator
  */
 final class PDFGeneratorTest extends TestCase
 {
@@ -15,6 +15,7 @@ final class PDFGeneratorTest extends TestCase
      * Test if generate produce a file
      *
      * Also test if field could be created
+     * @covers FormFiller\PDF\PDFGenerator::start()
      *
      * Todo : Refactor use mocks
      *

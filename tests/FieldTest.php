@@ -5,7 +5,7 @@ use FormFiller\PDF\Field;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers Field
+ * @covers FormFiller\PDF\Field
  */
 final class FieldTest extends TestCase
 {
