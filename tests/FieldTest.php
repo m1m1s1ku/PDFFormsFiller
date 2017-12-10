@@ -11,6 +11,8 @@ final class FieldTest extends TestCase
 {
 
     /**
+     * Test if a field is produced with an array of fields
+     *
      * @throws Exception
      */
     public function testFieldFromArray(){

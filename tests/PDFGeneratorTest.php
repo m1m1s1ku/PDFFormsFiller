@@ -12,6 +12,12 @@ final class PDFGeneratorTest extends TestCase
 {
 
     /**
+     * Test if generate produce a file
+     *
+     * Also test if field could be created
+     *
+     * Todo : Refactor use mocks
+     *
      * @throws Exception
      */
     public function testGenerateCeremony(){
@@ -49,6 +55,11 @@ final class PDFGeneratorTest extends TestCase
 
     }
 
+    /**
+     * Get fake data for test suite
+     *
+     * @return array
+     */
     private function getFakeData(){
         return [
             'cat_name'    => [
