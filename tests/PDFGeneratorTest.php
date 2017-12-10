@@ -16,7 +16,6 @@ final class PDFGeneratorTest extends TestCase
      */
     public function testGenerateCeremony(){
         $fieldEntities = [];
-        $nbFields = 3;
 
         foreach($this->getFakeData() as $k => $fake){
             $field = new Field;
