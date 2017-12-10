@@ -4,9 +4,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/contains-cat-gifs.svg)](http://forthebadge.com)
 
 [![Build Status](https://travis-ci.org/Ghostfly/PDFFormsFiller.svg?branch=master)](https://travis-ci.org/Ghostfly/PDFFormsFiller)
-[![Latest Stable Version](https://poser.pugx.org/ghostfly/pdf-forms-filler/v/stable)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
 [![Total Downloads](https://poser.pugx.org/ghostfly/pdf-forms-filler/downloads)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
-[![Latest Unstable Version](https://poser.pugx.org/ghostfly/pdf-forms-filler/v/unstable)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
 [![License](https://poser.pugx.org/ghostfly/pdf-forms-filler/license)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
 [![composer.lock](https://poser.pugx.org/ghostfly/pdf-forms-filler/composerlock)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
 
