@@ -61,13 +61,19 @@ class PDFGenerator {
 
     /**
      * Start to generate using original, save to dest
+     *
      * @param string $formPath
      * @param string $dest
-     * 
-     * @throws \Exception
+     *
+     * @param string $fontSize
+     *
+     * @param string $fontStyle
+     * @param string $fontName
+     *
      * @return void
+     * @throws \Exception
      */
-    public function start(string $formPath, string $dest) {
+    public function start(string $formPath, string $dest, string $fontName = 'Arial', string $fontSize = '12', string $fontStyle = 'B') {
         $this->fpdf = new FPDF($this->orientation, $this->unit, $this->size);
 
         $this->fpdf->SetMargins(10, 10, 10);
@@ -77,10 +83,10 @@ class PDFGenerator {
         $this->fpdf->AddPage();
 
         $this->fpdf->AliasNbPages();
-        $this->fpdf->SetFont('Arial', 'B', '8');
+        $this->fpdf->SetFont($fontName, $fontStyle, $fontSize);
 
         $sizes = ['A3'     => 1190.55, 'A4' => 841.89, 'A5' => 595.28,
-                      'letter' => 792, 'legal' => 1008];
+                  'letter' => 792, 'legal' => 1008];
 
         // writing fields, if value not defined defaults to blank string
         $this->writeFields($this->fields, $this->data, $sizes[$this->size]);
@@ -121,7 +127,7 @@ class PDFGenerator {
 
             // Set with good coords system.
             $this->fpdf->SetXY($field->getLlx(), PDFHelper::reverseYAxis($pageSize, $offset, $field->getLly()));
- 
+
             // Write !
             if(array_key_exists($field->getId(), $data))
                 $field->setValue($data[$field->getId()]);
@@ -138,23 +144,23 @@ class PDFGenerator {
      * Merge two PDF (doc A and over doc B)
      * @param string $pdfA path of pdfA
      * @param string $pdfB path of pdfB
-     * @param string $dest 
-     * 
+     * @param string $dest
+     *
      * @return Boolean
-     * 
+     *
      * @throws \Exception
      */
     public function merge($pdfA, $pdfB, $dest) : bool {
         $pdf = new FPDI();
         $pdf->setSourceFile($pdfA);
 
-        $pageCount = $pdf->currentParser->getPageCount();   
+        $pageCount = $pdf->currentParser->getPageCount();
 
         for($i = 1; $i <= $pageCount; $i++){
-            $pdf->addPage();   
+            $pdf->addPage();
 
             // Adding background pdf
-            $pdf->setSourceFile($pdfA);            
+            $pdf->setSourceFile($pdfA);
             $pageA = $pdf->importPage($i, '/MediaBox');
             $pdf->useTemplate($pageA);
 
@@ -163,7 +169,7 @@ class PDFGenerator {
 
             // If page exists on it
             if($i <= $pdf->currentParser->getPageCount()){
-                $pageB = $pdf->importPage($i, '/MediaBox');            
+                $pageB = $pdf->importPage($i, '/MediaBox');
                 $pdf->useTemplate($pageB);
             }
         }
