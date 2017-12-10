@@ -1,5 +1,5 @@
 {
     "require": {
-        "ghostfly/pdf-forms-filler": "dev-master"
+        "ghostfly/pdf-forms-filler": "^1.0"
     }
 }
