@@ -7,4 +7,4 @@ before_install:
 - composer install --dev
 
 script:
-- ./vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml tests
+- ./vendor/bin/phpunit tests

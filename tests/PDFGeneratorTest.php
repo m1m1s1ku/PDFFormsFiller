@@ -6,6 +6,6 @@ use PHPUnit\Framework\TestCase;
 /**
  * @covers \FormFiller\PDF\PDFGenerator
  */
-final class PDFGeneratorTest extends TestCase
+/*final class PDFGeneratorTest extends TestCase
 {
-}
+}*/
