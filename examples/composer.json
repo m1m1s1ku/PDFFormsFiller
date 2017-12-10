@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ghostfly/pdf-forms-filler": "dev-master"
+    }
+}

@@ -15,7 +15,7 @@ namespace FormFiller\PDF\Converter;
  * This converter gives you a JSON Array containing fields with locations / page, in a form usable by the Generator
  *
  * Usage : $converter = new Converter($string);
- *         $converter->getPagesWithFieldsCount();
+ *         $converter->loadPagesWithFieldsCount();
  *
  *         $json = $converter->formatFieldsAsJson($pages);
  */
@@ -38,11 +38,10 @@ class Converter {
 
     /**
      * Format fields as JSON
-     * @param $pages
      *
      * @return bool|string
      */
-    public function formatFieldsAsJSON($pages){
+    public function formatFieldsAsJSON(){
         // Find every field to convert into JSON
         $re = '/(\S*): (\S*)/';
 
@@ -58,7 +57,7 @@ class Converter {
                 $newObject = "{\"".$match[1]."\":{";
             } else if($match[1] == 'height') {
                 $onPage = count($objects);
-                $page = $this->findPageForField($pages, $onPage);
+                $page = $this->findPageForField($onPage);
                 $newObject .=  "\"". $match[1] . "\":".$match[2] . ",\"page\":$page}},";
                 $objects[] = $newObject;
                 $json .= $newObject;
@@ -86,7 +85,7 @@ class Converter {
      * $arr[pageId] = fieldsCount
      * @return void
      */
-    public function getPagesWithFieldsCount(){
+    public function loadPagesWithFieldsCount(){
         $re = '/(\d*).* page (\d)/';
         $matches = [];
         $pages = [];
@@ -107,13 +106,12 @@ class Converter {
     /**
      * Find Page for Field based on actual count and extracted data
      *
-     * @param $pages
      * @param $count
      *
      * @return int|string
      */
-    private function findPageForField($pages, $count){
-        foreach($pages as $p => $page){
+    private function findPageForField($count){
+        foreach($this->pages as $p => $page){
             if($count <= $page){
                 return $p;
             }
