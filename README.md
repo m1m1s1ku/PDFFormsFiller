@@ -4,7 +4,7 @@ Fill Acrobat forms easily using pure PHP ! 💪
 
 ## Install :
 ```
-composer require ghostfly/pdf-forms-filler
+composer require ghostfly/pdf-forms-filler:dev-master
 ```
 
 ## Usage :
