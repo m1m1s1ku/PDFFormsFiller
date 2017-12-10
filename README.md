@@ -1,5 +1,10 @@
 # PDFFormsFiller
 
+[![Latest Stable Version](https://poser.pugx.org/ghostfly/pdf-forms-filler/v/stable)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
+[![Total Downloads](https://poser.pugx.org/ghostfly/pdf-forms-filler/downloads)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
+[![Latest Unstable Version](https://poser.pugx.org/ghostfly/pdf-forms-filler/v/unstable)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
+[![License](https://poser.pugx.org/ghostfly/pdf-forms-filler/license)](https://packagist.org/packages/ghostfly/pdf-forms-filler)
+
 Fill Acrobat forms easily using pure PHP ! 💪
 
 ## Install :
