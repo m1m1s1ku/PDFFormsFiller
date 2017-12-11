@@ -52,17 +52,26 @@ class Converter {
         $json = "";
 
         foreach($matches as $match){
+            // If it's not a coord
             if(!in_array($match[1], $coords)){
+                // Starting new object
                 $newObject = "{\"".$match[1]."\":{";
+            // If it's height
             } else if($match[1] == 'height') {
-                $onPage = count($objects);
+                // Finishing our new object
+                $onPage = count($objects); // Used to define page for field
                 $page = $this->findPageForField($onPage);
-                /** @var string $newObject */
+                /**
+                 * @var string $newObject
+                 */
                 $newObject .= "\"" . $match[1] . "\":" . $match[2] . ",\"page\":$page}},";
                 $objects[] = $newObject;
                 $json .= $newObject;
             } else {
-                /** @var string $newObject */
+                // Fill our new object
+                /**
+                 * @var string $newObject
+                 */
                 $newObject .= "\"" . $match[1] . "\":" . $match[2] . ",";
             }
         }
@@ -96,7 +105,9 @@ class Converter {
         $previousPageCount = 0;
         foreach($matches as $pageInfo){
             if($pageInfo[1] != 0){
+                // Add into array $arr[$pageIndex] + $previous
                 $pages[$pageInfo[2]] = $pageInfo[1] + $previousPageCount;
+                // Add to next page
                 $previousPageCount+= $pageInfo[1];
             }
         }
@@ -113,6 +124,7 @@ class Converter {
      */
     private function findPageForField($count){
         foreach($this->pages as $p => $page){
+            // if count don't exceed our page fields count, it's there.
             if($count <= $page){
                 return $p;
             }
