@@ -66,6 +66,47 @@ class Field {
      private $value;
 
     /**
+     * Convert an array to Field
+     *
+     * @param array $data
+     *
+     * @return Field
+     * @throws \Exception
+     */
+     public static function fieldFromArray(array $data) : Field {
+        $field = new Field;
+        $field->id = array_keys($data)[0];
+        $values = $data[$field->id];
+
+        if(!array_key_exists('page', $values))
+            throw new \Exception("Field needs to have a page : $data");
+        
+        $field->llx = $values['llx'];
+        $field->lly = $values['lly'];
+        $field->urx = $values['urx'];
+        $field->ury = $values['ury'];
+        $field->height = $values['height'];
+        $field->width = $values['width'];
+        $field->page = $values['page'];
+
+        return $field;
+     }
+
+    /**
+     * Convert a Json field to Field
+     *
+     * @param string $json
+     *
+     * @return Field
+     * @throws \Exception
+     */
+     public static function fieldFromJSON(string $json) : Field {
+        $field = json_decode($json);
+        
+        return self::fieldFromArray($field);
+     }
+
+    /**
      * @return string
      */
     public function getId (): string {
@@ -136,47 +177,6 @@ class Field {
 
         return $this->value;
     }
-
-    /**
-     * Convert an array to Field
-     *
-     * @param array $data
-     *
-     * @return Field
-     * @throws \Exception
-     */
-     public static function fieldFromArray(array $data) : Field {
-        $field = new Field;
-        $field->id = array_keys($data)[0];
-        $values = $data[$field->id];
-
-        if(!array_key_exists('page', $values))
-            throw new \Exception("Field needs to have a page : $data");
-        
-        $field->llx = $values['llx'];
-        $field->lly = $values['lly'];
-        $field->urx = $values['urx'];
-        $field->ury = $values['ury'];
-        $field->height = $values['height'];
-        $field->width = $values['width'];
-        $field->page = $values['page'];
-
-        return $field;
-     }
-
-    /**
-     * Convert a Json field to Field
-     *
-     * @param string $json
-     *
-     * @return Field
-     * @throws \Exception
-     */
-     public static function fieldFromJSON(string $json) : Field {
-        $field = json_decode($json);
-        
-        return self::fieldFromArray($field);
-     }
 
     /**
      * @param string $value
