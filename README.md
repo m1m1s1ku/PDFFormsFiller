@@ -19,7 +19,7 @@ Fill Acrobat forms easily using pure PHP ! 💪
 $ composer require ghostfly/pdf-forms-filler
 ```
 
-## Run example :
+## Example :
 - clone repository
 - go to example folder
 - composer install
@@ -59,6 +59,11 @@ If you need a full example : [index.php](https://github.com/Ghostfly/PDFFormsFil
 ## Tests
 ```
 $ ./vendor/bin/phpunit tests
+```
+
+## Code coverage
+```
+$ ./vendor/bin/phpunit tests --coverage-text --coverage-clover build/logs/clover.xml
 ```
 
 Done. ;)
