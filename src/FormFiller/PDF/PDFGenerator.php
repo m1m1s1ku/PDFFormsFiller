@@ -2,7 +2,7 @@
 
 namespace FormFiller\PDF;
 
-use FPDI;
+use setasign\Fpdi\Fpdi;
 use FPDF;
 
 /**
@@ -157,9 +157,7 @@ class PDFGenerator {
      */
     public function merge($pdfA, $pdfB, $dest) : bool {
         $pdf = new FPDI();
-        $pdf->setSourceFile($pdfA);
-
-        $pageCount = $pdf->currentParser->getPageCount();
+        $pageCount = $pdf->setSourceFile($pdfA);
 
         for($i = 1; $i <= $pageCount; $i++){
             $pdf->addPage();
@@ -170,10 +168,10 @@ class PDFGenerator {
             $pdf->useTemplate($pageA);
 
             // Looking for file B -> our generated pdf with data
-            $pdf->setSourceFile($pdfB);
+            $countB = $pdf->setSourceFile($pdfB);
 
             // If page exists on it
-            if($i <= $pdf->currentParser->getPageCount()){
+            if($i <= $countB){
                 $pageB = $pdf->importPage($i, '/MediaBox');
                 $pdf->useTemplate($pageB);
             }
