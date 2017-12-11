@@ -11,9 +11,12 @@
 
 Fill Acrobat forms easily using pure PHP ! 💪
 
+## Requirements
+- PHP >= 7.1.0
+
 ## Install :
 ```
-composer require ghostfly/pdf-forms-filler
+$ composer require ghostfly/pdf-forms-filler
 ```
 
 ## Run example :
@@ -50,5 +53,12 @@ If your original PDF is not handled by fpdf, you can convert it using this servi
 [Convert PDF](https://docupub.com/pdfconvert/) with "Acrobat 4.0 (PDF 1.3)"
 
 Don't care about form fields on file to send to generator, the locations are determined using the latest PDF format. 
+
+If you need a full example : [index.php](https://github.com/Ghostfly/PDFFormsFiller/blob/master/example/index.php).
+
+## Tests
+```
+$ ./vendor/bin/phpunit tests
+```
 
 Done. ;)
